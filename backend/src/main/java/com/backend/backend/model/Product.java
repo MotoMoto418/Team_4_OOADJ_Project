@@ -30,6 +30,18 @@ public class Product {
     @Getter
     private int buyer_id;
 
+    @Getter
+    @Setter
+    private String how_old;
+
+    @Getter
+    @Setter
+    private String images;
+
+    @Getter
+    @Setter
+    private int category;
+
     @Override
     public String toString() {
         return "ProductEntity{" +
@@ -39,17 +51,22 @@ public class Product {
                 ", price=" + price +
                 ", seller_id=" + seller_id +
                 ", buyer_id=" + buyer_id +
+                ", how_old=" + how_old +
+                ", images=" + images +
+                ", category" + category +
                 '}';
     }
 
-
-    public Product(int id, String name, String description, BigDecimal price, int seller_id, int buyer_id) {
+    public Product(int id, String name, String description, BigDecimal price, int seller_id, int buyer_id, String how_old, String images, int category) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
         this.seller_id = seller_id;
         this.buyer_id = buyer_id;
+        this.how_old = how_old;
+        this.images = images;
+        this.category = category;
     }
 
     public Product() {

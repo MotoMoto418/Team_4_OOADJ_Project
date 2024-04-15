@@ -36,13 +36,28 @@ public class ProductEntity {
     @Setter
     private int buyer_id;
 
-    public ProductEntity(int id, String name, String description, BigDecimal price, int seller_id, int buyer_id) {
+    @Getter
+    @Setter
+    private String how_old;
+
+    @Getter
+    @Setter
+    private String images;
+
+    @Getter
+    @Setter
+    private int category;
+
+    public ProductEntity(int id, String name, String description, BigDecimal price, int seller_id, int buyer_id, String how_old, String images, int category) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
         this.seller_id = seller_id;
         this.buyer_id = buyer_id;
+        this.how_old = how_old;
+        this.images = images;
+        this.category = category;
     }
 
     public ProductEntity() {
